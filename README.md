@@ -54,7 +54,7 @@ Isolates systemic exception metrics, high-latency outlier components, and struct
 Structural EDA Distributive Visuals Baseline exploratory analysis profiling regional transaction balance, onboarding trajectories, and latency patterns.
 
 ## Exploratory Data Analysis Charts
-Below are the exploratory visuals generated during data profiling to understand system load distribution, registration trends, and processing times[cite: 1]:
+Below are the exploratory visuals generated during data profiling to understand system load distribution, registration trends, and processing times:
 * **[Server Region Workload Distribution](https://github.com/Gayatrik04/API-Performance-Error-Monitoring-Pipeline/blob/main/API%20Performance%20%26%20Error%20Monitoring/screenshot/Request%20count%20by%20server%20region.png)** – *A chart mapping incoming requests across global servers, showing balanced infrastructure ingress led by Sa-East-1.*
 * **[Monthly User Sign-Up Trends](https://github.com/Gayatrik04/API-Performance-Error-Monitoring-Pipeline/blob/main/API%20Performance%20%26%20Error%20Monitoring/screenshot/Monthly%20SignUp%20trend.png)** – *A line chart tracking user acquisition, highlighting the sudden customer onboarding spike in month 12.*
 * **[Server Response Time Frequency Spread](https://github.com/Gayatrik04/API-Performance-Error-Monitoring-Pipeline/blob/main/API%20Performance%20%26%20Error%20Monitoring/screenshot/Response%20Time%20Distribution.png)** – *An optimized histogram displaying performance clusters peaking sharply between 50ms and 100ms.*.
@@ -70,17 +70,15 @@ Below are the exploratory visuals generated during data profiling to understand 
   
 -----------------
 ## Conclusion & Recommendations
-Based on the operational insights derived from the monitoring pipeline, the following actions are recommended for implementation[cite: 1]:
-* Deploy an Incident Forensic Team for the "May Cliff": Treat the post-May traffic and registration drop as a P0 catastrophic event[cite: 1]. Audit infrastructure logs to check if an unindexed query lockup, an expired root SSL/TLS certificate, a broken user-billing gateway, or a major routing black hole caused the data collection or traffic engines to freeze[cite: 1].
-* Overhaul Authentication & Gateway Architecture: Decouple the core architecture of Auth Engine #59[cite: 1]. Implement high-speed distributed database caching networks (Redis or Memcached) to handle session token validations, and deploy token-based authentications (JWTs) utilizing expanded, optimized Time-To-Live (TTL) boundaries[cite: 1].
-* Transition to Asynchronous Message Hubs: Shift heavy, long-running processes (such as the Marketing and Auth engines currently averaging >8,000 seconds) from synchronous REST pathways to asynchronous message-driven backbones like Apache Kafka or RabbitMQ[cite: 1]. Configure endpoints to instantly return a 202 Accepted status code, delivering data out-of-band via upstream webhooks[cite: 1].
-* Establish Automated Circuit Breakers: Deploy a cloud-native service mesh architecture (Istio)[cite: 1]. If Auth Engine #59 hits its 2% error rate threshold, trigger an automated circuit breaker to fail fast and instantly redirect incoming traffic to a generic backup container rather than letting connections timeout indefinitely[cite: 1].
-* Enforce Strict API Route Telemetry: Mandate that all engineering teams resolve the unmapped Unknown API category classification[cite: 1]. Every live endpoint route must explicitly map back to a defined engineering team owner and a valid microservice bucket to eliminate security holes caused by shadow services[cite: 1].
+Based on the operational insights derived from the monitoring pipeline, the following actions are recommended for implementat:
+* Deploy an Incident Forensic Team for the "May Cliff": Treat the post-May traffic and registration drop as a P0 catastrophic event. Audit infrastructure logs to check if an unindexed query lockup, an expired root SSL/TLS certificate, a broken user-billing gateway, or a major routing black hole caused the data collection or traffic engines to freeze.
+* Overhaul Authentication & Gateway Architecture: Decouple the core architecture of Auth Engine . Implement high-speed distributed database caching networks (Redis or Memcached) to handle session token validations, and deploy token-based authentications (JWTs) utilizing expanded, optimized Time-To-Live (TTL) boundaries.
+* Transition to Asynchronous Message Hubs: Shift heavy, long-running processes (such as the Marketing and Auth engines currently averaging >8,000 seconds) from synchronous REST pathways to asynchronous message-driven backbones like Apache Kafka or RabbitMQ. Configure endpoints to instantly return a 202 Accepted status code, delivering data out-of-band via upstream webhooks.
+* Establish Automated Circuit Breakers: Deploy a cloud-native service mesh architecture. If Auth Engine #59 hits its 2% error rate threshold, trigger an automated circuit breaker to fail fast and instantly redirect incoming traffic to a generic backup container rather than letting connections timeout indefinitely.
+* Enforce Strict API Route Telemetry: Mandate that all engineering teams resolve the unmapped Unknown API category classification. Every live endpoint route must explicitly map back to a defined engineering team owner and a valid microservice bucket to eliminate security holes caused by shadow service.
   
 ----------------------
-Prepared By: Gayatri Kasbekar | Tools Used: Python, MySQL, Power BI[cite: 1]
-## GitHub Repository
-https://github.com/Gayatrik04/SQL-Query-Performance-Analysis/
-
-## LinkedIn
-https://www.linkedin.com/in/gayatri-kasbekar-674a883a3/
+Prepared By: Gayatri Kasbekar | Tools Used: Python, MySQL, Power BI
+----------
+GitHub:https://github.com/Gayatrik04 
+LinkedIn:https://www.linkedin.com/in/gayatri-kasbekar-674a883a3/
