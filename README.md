@@ -48,7 +48,7 @@ The analysis processes a relational network constructed across four primary data
 ## Dashboards & Visualizations
 ### Executive Operations Panel
 Tracks overall platform statistics (3,026M Requests, 98% Success, 2% Errors) and displays the historical transaction trend crash post-May. 
-**Live Power BI Dashboard Layout:** [[View Live Dashboard](https://github.com/Gayatrik04/API-Performance-Error-Monitoring-Pipeline/blob/main/API%20Performance%20%26%20Error%20Monitoring/dashboard/API%20Performance%20%26%20Error%20Analysis%20Dashboard.pbix)
+**Live Power BI Dashboard Layout:** [View Live Dashboard](https://github.com/Gayatrik04/API-Performance-Error-Monitoring-Pipeline/blob/main/API%20Performance%20%26%20Error%20Monitoring/dashboard/API%20Performance%20%26%20Error%20Analysis%20Dashboard.pbix)
 ### Latency & Failure Diagnostic Panel
 Isolates systemic exception metrics, high-latency outlier components, and structural performance bottlenecks.
 Structural EDA Distributive Visuals Baseline exploratory analysis profiling regional transaction balance, onboarding trajectories, and latency patterns.
